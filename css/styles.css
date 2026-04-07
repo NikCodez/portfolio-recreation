@@ -132,19 +132,20 @@ nav {
   text-align: center;
   flex-direction: column;
   position: relative;
+  height: 100vh;
 }
 
 .hero-bg{
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  width: 75%;        
+   width: 65%;
+  height: 110%;        
   aspect-ratio: 1;  
-
-  background-image: url('./images/hero-bg.png'); 
-  background-size: contain;
+  mix-blend-mode: normal;
+  background-image: url('../assets/images/hero-bg.png'); 
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-mask-image: radial-gradient(ellipse 45% 45% at center, black 25%, transparent 100%);
@@ -308,16 +309,6 @@ nav {
   }
 }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
 .subtitle {
   /* margin-top: 2500px; */
   font-size: 1rem;
@@ -397,7 +388,7 @@ nav {
 }
 
 #scrolllogo img[alt="Laasya Logo"] {
-  height: 75px;   
+  height: 65px;   
 }
 #scrolllogo img[alt="ITA Logo"] {
   height: 85px;   
