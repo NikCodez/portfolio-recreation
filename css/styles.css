@@ -16,6 +16,7 @@ body {
   background: radial-gradient(circle at 20% 30%, rgba(124,92,255,0.15), transparent 40%),
               radial-gradient(circle at 80% 20%, rgba(255,150,80,0.15), transparent 40%),
               #0d0d0d;
+  scroll-behavior: smooth;
 }
 
 body::after {
@@ -42,17 +43,35 @@ section {
 }
 
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   padding: 25px 2%;
-
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  backdrop-filter: none;     /* remove blur */
-
   z-index: 1000;
+  background: transparent;
+  backdrop-filter: none;
+  opacity: 1;                      /* visible by default */
+  transform: translateY(0);
+  transition: transform 0.4s ease, opacity 0.3s ease, background 0.4s ease;
+}
+
+/* Scrolling — hide it */
+.navbar.hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+/* Past the name — show with blur */
+.navbar.scrolled {
+  opacity: 1;
+  transform: translateY(0);
+  background: rgba(13, 13, 13, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 #logo {
@@ -194,7 +213,6 @@ nav {
   letter-spacing: 2px;
   color: #ffffff;
   line-height: 1.1;
-  animation-duration: 2s;
 }
 
 .btn {
@@ -336,6 +354,8 @@ nav {
   z-index: 2;
   transition: filter 0.4s ease;
   filter: grayscale(100%) brightness(0.7);
+  animation-delay: 0.5s;
+  animation-timing-function: ease-out;
 }
 
 #featured p{
@@ -396,6 +416,47 @@ nav {
 #scrolllogo img[alt="GitHub Logo"] {
   height: 75px;   
 }
+/* Scroll indicator in 1st page to 2nd page */
+.scroll-indicator {
+  margin-top: -100px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.field {
+  width: 40px;
+  height: 55px;
+  border: 2px solid rgb(250, 248, 248);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+
+.scroll {
+  width: 6px;
+  height: 10px;
+  background: rgb(254, 254, 254);
+  border-radius: 20px;
+  animation: scrollBounce 1.6s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(14px);
+    opacity: 0.3;
+  }
+}
 
 
