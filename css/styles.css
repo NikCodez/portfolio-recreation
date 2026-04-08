@@ -26,12 +26,6 @@ body::after {
   pointer-events: none;
 }
 
-.container {
-  width: 85%;
-  margin: auto;
-  max-width: 1200px;
-}
-
 h1, h2, h3 {
   font-weight: 600;
 }
@@ -212,6 +206,15 @@ nav {
   font-weight: 700;
   letter-spacing: 2px;
   color: #ffffff;
+  background: linear-gradient(135deg, #d4d5d6, #d1d0d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 
+    -1px -1px 0 rgb(205, 200, 200),
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 rgb(14, 12, 12);
   line-height: 1.1;
 }
 
@@ -294,6 +297,7 @@ nav {
   align-items: center;
   gap: 16px;
   margin-bottom: 24px;
+  
 }
 
 .card-header h3 {
@@ -314,7 +318,7 @@ nav {
 }
 
 .card-body {
-  padding-left: 16px;
+  padding: 22px;
   border-left: 3px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -504,3 +508,125 @@ nav {
   text-align: center;
 }
 
+.work {
+  padding: 120px 8%;
+  position: relative;
+}
+
+.work-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.work-left {
+  flex: 1;
+  max-width: 480px;
+}
+
+.work-title {
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.work-desc {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.2rem;
+  color: #faf1f1;
+  line-height: 1.3;
+  max-width: 480px;
+}
+
+.work-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.phone-mockup {
+  position: absolute;
+  transform: rotate(-5deg);
+  transform-origin: bottom center;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.5));
+}
+
+.phone-mockup video {
+  width: 750px;
+  height: 600px;
+  display: block;
+}
+
+.featured-project {
+  position: absolute;
+  justify-content: center;
+  bottom: -20px;
+  left: 60px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.arrow-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #f3ecec;
+  font-size: 1.3rem;
+  width: 180px;
+  height: 140px;
+}
+
+.arrow-label img {
+  width: 120px;
+  height: 120px;
+  margin-left: 50px;
+}
+
+.project-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.btn-view {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #7c5cff;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  width: fit-content;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-view:hover {
+  background: #6a4de0;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .work-inner {
+    flex-direction: column;
+  }
+  .work-right {
+    width: 100%;
+    min-height: 400px;
+  }
+  .phone-mockup {
+    width: 200px;
+    right: 20px;
+  }
+}
