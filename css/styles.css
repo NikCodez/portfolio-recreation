@@ -729,3 +729,199 @@ nav {
     height: 260px;
   }
 }
+
+.experience{
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expcontainer{
+  gap: 100px;
+}
+
+.exptabs {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 75px;
+}
+
+.expcontent h2{
+  font-family: "Poppins",Sans-serif;
+  font-size: 62px;
+  font-weight: 600;
+  line-height: 1.1em;
+  text-align: center;
+}
+
+.tab{
+  color: #f5efef;
+  background-color: #490C86DE;
+  width: 700px; 
+  height: 55px;
+  border-radius: 5px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;  
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  padding: 0px 80px;
+  background: #0a0c14;
+}
+
+/* WRAPPER */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr ));
+  gap: 1em;
+  align-items:start;
+  }
+.contact-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+/* BIG LEFT CARD */
+.testimonial:first-child {
+  grid-row: span 2;
+}
+/* FORCE RIGHT BOTTOM */
+.testimonial.dpurple {
+  grid-column: 2;
+  grid-row: 2;
+}
+.timg img{
+  align-items: end;
+  height: 80px;
+  width: 80px;
+  border-radius:50px;
+}
+
+/* LEFT SIDE */
+.contact-left h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.contact-left p {
+  font-family: 'Roboto Mono', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 100px;
+  font-weight: 900;
+  font-size: large
+}
+
+.email {
+  position: relative;
+  display: inline-block;
+  margin-top: 120px;
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 22px;
+  font-weight: 1000;
+  color: #ede9f0;
+  overflow: hidden;   /* important */
+  z-index: 1;
+}
+
+/* BACKGROUND LAYER */
+.email::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 31%;   /* start from bottom */
+  background: #8a2be2;
+  z-index: -1;
+  transition: height 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.email:hover::before {
+  height: 100%;   /* fill top */
+}
+
+/* TEXT COLOR CHANGE */
+.email:hover {
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+.socials a{
+  display:inline-block;
+  font-size: large;
+  font-family: 'Roboto Mono', sans-serif;
+  margin: 8px 0;
+  cursor: pointer;
+  color: #fffefe;
+  text-decoration: none;
+}
+
+.socials a:hover{
+  color: #00ccff;
+  padding: 0%;
+}
+
+/* RIGHT SIDE */
+.contact-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* TESTIMONIAL CARDS */
+.testimonial {
+  padding: 25px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* COLORS */
+.testimonial.purple {
+  background: linear-gradient(135deg, #8a2be2, #aa5ff5);
+}
+
+.testimonial.blue {
+  background: linear-gradient(135deg, #1e90ff, #3b82f6);
+  height: 400px;
+}
+.testimonial.dpurple {
+  align-items: right;
+  background: linear-gradient(135deg, #6800c9, #8826e9);
+}
+.testimonial p {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.testimonial h4 {
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  opacity: 1.0;
+}
+.expertise h2 {
+  font-size: clamp(28px, 6vw, 60px);
+}
+
+.expertise-card h3 {
+  font-size: clamp(18px, 4vw, 24px);
+}
+
+.card-description {
+  font-size: clamp(13px, 3vw, 17px);
+}
