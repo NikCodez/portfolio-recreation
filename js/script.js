@@ -20,7 +20,6 @@ window.addEventListener('scroll', () => {
 });
 
 //to add the dropdown on click feature on experience tabs
-// ── Experience Accordion ──
 const tabs = document.querySelectorAll('.tab');
 
 tabs.forEach(tab => {
