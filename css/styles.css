@@ -365,7 +365,6 @@ nav {
 }
 
 .subtitle {
-  /* margin-top: 2500px; */
   font-size: 1rem;
   letter-spacing: 4px;
   color: #cfcfcf;
@@ -756,30 +755,130 @@ nav {
   text-align: center;
 }
 
-.tab{
-  color: #f5efef;
+.experience {
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expcontent h2 {
+  font-family: "Poppins", Sans-serif;
+  font-size: 62px;
+  font-weight: 600;
+  line-height: 1.1em;
+  text-align: center;
+}
+
+.exptabs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 75px;
+}
+
+.tab {
   background-color: #490C86DE;
-  width: 700px; 
-  height: 55px;
-  border-radius: 5px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 6px;
-  line-height: 1.3;
+  width: 700px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #5a14a0de;
+}
+
+.tab-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 20px;  
+  padding: 18px 20px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-/* CONTACT SECTION */
+.tab-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tab-date {
+  font-size: 0.85rem;
+  color: #ccc;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.tab-arrow {
+  font-size: 0.75rem;
+  color: #ccc;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.tab.open .tab-arrow {
+  transform: rotate(180deg);
+}
+
+.tab-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 20px;
+}
+
+.tab.open .tab-body {
+  max-height: 300px;
+  padding: 0 20px 20px;
+}
+
+.tab-body ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab-body ul li {
+  font-size: 0.9rem;
+  color: #ddd;
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.tab-body ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #b57bee;
+}
+
+.tab-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tab-tags span {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0c8ff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 .contact-section {
   padding: 0px 80px;
   background: #0a0c14;
 }
 
-/* WRAPPER */
 .contact-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr ));
@@ -792,7 +891,7 @@ nav {
   grid-template-rows: auto auto;
   gap: 20px;
 }
-/* BIG LEFT CARD */
+
 .testimonial:first-child {
   grid-row: span 2;
 }
@@ -808,7 +907,6 @@ nav {
   border-radius:50px;
 }
 
-/* LEFT SIDE */
 .contact-left h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 42px;
@@ -835,7 +933,6 @@ nav {
   z-index: 1;
 }
 
-/* BACKGROUND LAYER */
 .email::before {
   content: "";
   position: absolute;
@@ -848,12 +945,10 @@ nav {
   transition: height 0.4s ease;
 }
 
-/* HOVER EFFECT */
 .email:hover::before {
   height: 100%;   /* fill top */
 }
 
-/* TEXT COLOR CHANGE */
 .email:hover {
   color: white;
   padding: 5px;
@@ -874,21 +969,18 @@ nav {
   padding: 0%;
 }
 
-/* RIGHT SIDE */
 .contact-right {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
-/* TESTIMONIAL CARDS */
 .testimonial {
   padding: 25px;
   border-radius: 10px;
   color: white;
 }
 
-/* COLORS */
 .testimonial.purple {
   background: linear-gradient(135deg, #8a2be2, #aa5ff5);
 }

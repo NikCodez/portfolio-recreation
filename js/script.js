@@ -18,3 +18,21 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('hidden');
   }
 });
+
+//to add the dropdown on click feature on experience tabs
+// ── Experience Accordion ──
+const tabs = document.querySelectorAll('.tab');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const isOpen = tab.classList.contains('open');
+
+    // Close all tabs first
+    tabs.forEach(t => t.classList.remove('open'));
+
+    // If it wasn't open, open it
+    if (!isOpen) {
+      tab.classList.add('open');
+    }
+  });
+});
