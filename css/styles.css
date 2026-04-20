@@ -816,10 +816,10 @@ nav {
 }
 
 .contact-left p {
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: 'Space Mono', monospace;
   line-height: 1.6;
   margin-bottom: 100px;
-  font-weight: 900;
+  font-weight: 500;
   font-size: large
 }
 
