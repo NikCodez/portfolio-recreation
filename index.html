@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -49,7 +49,22 @@
           </li>
         </ul>
       </nav>
+      <button class="hamburger" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
     </header>
+    <div class="mobile-menu">
+  <ul>
+    <li><span>01</span><a href="#home">// home</a></li>
+    <li><span>02</span><a href="#expertise">// expertise</a></li>
+    <li><span>03</span><a href="#work">// work</a></li>
+    <li><span>04</span><a href="#experience">// experience</a></li>
+    <li><span>05</span><a href="#contact">// contact</a></li>
+  </ul>
+</div>
+
     <section id="home" class="hero">
       <div class="hero-bg"></div>
       <div class="hero-content">
@@ -58,10 +73,7 @@
           FRONTEND DEVELOPER | GRAPHIC DESIGNER.
         </p>
       </div>
-      <div
-        id="featured"
-        class="featured section animate__animated animate__fadeIn"
-      >
+      <div id="featured" class="featured section animate__animated animate__fadeIn">
         <p>AS FEATURED IN</p>
         <div id="scrolllogo">
           <a
@@ -96,14 +108,15 @@
           </a>
         </div>
       </div>
-    </section>
-    <a href="#expertise" style="text-decoration: none">
+      <a href="#expertise" style="text-decoration: none">
       <div class="scroll-indicator">
         <div class="field">
           <div class="scroll"></div>
         </div>
       </div>
     </a>
+    </section>
+    
 
     <!--  EXPERTISE SECTION  -->
     <section id="expertise" class="expertise">
@@ -458,7 +471,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <p>Copyright © 2026 @NikCodez - All rights reserved.</p>
+      <p><b>Copyright © 2026 @NikCodez - All rights reserved.</b></p>
     </footer>
   </body>
   <script src="./js/script.js"></script>
